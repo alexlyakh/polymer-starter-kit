@@ -10,3 +10,4 @@ Routes:
 - /view2
 - /view3
 - other -> 404
+CI: e2e tests run in GitHub Actions after build.
