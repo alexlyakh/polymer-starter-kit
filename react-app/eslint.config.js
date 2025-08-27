@@ -41,4 +41,16 @@ export default [
       }
     }
   }
+  ,
+  {
+    files: ["playwright.config.ts", "e2e/**"],
+    languageOptions: {
+      globals: {
+        process: "readonly",
+        module: "readonly",
+        require: "readonly",
+        __dirname: "readonly"
+      }
+    }
+  }
 ];
