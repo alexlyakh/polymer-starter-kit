@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
@@ -21,5 +22,5 @@ it("renders header title", () => {
 
 it("renders View One by default", () => {
   renderApp();
-  expect(screen.getByText("View One")).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /view one/i })).toBeInTheDocument();
 });
