@@ -16,7 +16,7 @@ import ViewTwo from "./pages/ViewTwo";
 import ViewThree from "./pages/ViewThree";
 import NotFound from "./pages/NotFound";
 
-const drawerWidth = 240;
+const drawerWidth = 256;
 
 export default function App() {
   const isDesktop = useMediaQuery("(min-width:900px)");
@@ -32,13 +32,13 @@ export default function App() {
     <Box role="presentation" sx={{ width: drawerWidth }}>
       <Toolbar />
       <List>
-        <ListItemButton component={RouterLink} to="/view1" selected={selected === "view1"} onClick={() => setOpen(false)}>
+        <ListItemButton component={RouterLink} to="/view1" selected={selected === "view1"} onClick={() => setOpen(false)} sx={{ "&.Mui-selected": { backgroundColor: (t) => t.palette.action.selected } }}>
           <ListItemText primary="View One" />
         </ListItemButton>
-        <ListItemButton component={RouterLink} to="/view2" selected={selected === "view2"} onClick={() => setOpen(false)}>
+        <ListItemButton component={RouterLink} to="/view2" selected={selected === "view2"} onClick={() => setOpen(false)} sx={{ "&.Mui-selected": { backgroundColor: (t) => t.palette.action.selected } }}>
           <ListItemText primary="View Two" />
         </ListItemButton>
-        <ListItemButton component={RouterLink} to="/view3" selected={selected === "view3"} onClick={() => setOpen(false)}>
+        <ListItemButton component={RouterLink} to="/view3" selected={selected === "view3"} onClick={() => setOpen(false)} sx={{ "&.Mui-selected": { backgroundColor: (t) => t.palette.action.selected } }}>
           <ListItemText primary="View Three" />
         </ListItemButton>
       </List>
